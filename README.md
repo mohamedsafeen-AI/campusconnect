@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # CampusConnect (Beginner-Friendly Full Stack)
 
 Student notes sharing website.
@@ -212,3 +213,6 @@ Because you haven’t deployed yet here, these are placeholders (example format 
 - [ ] Start backend
 - [ ] Open frontend
 
+=======
+# campusconnect
+>>>>>>> c1014574bafeab039f3e9fe4e79efa911fc07e84
