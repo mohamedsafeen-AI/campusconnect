@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard - CampusConnect</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="container header">
+    <div class="brand">
+      <h1>CampusConnect</h1>
+      <p class="muted">Your dashboard</p>
+    </div>
+    <nav class="nav">
+      <button id="logoutBtn" class="btn">Logout</button>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="grid">
+      <div class="card">
+        <h2>Upload Notes</h2>
+        <form id="uploadForm" class="form">
+          <label>
+            Note Title
+            <input id="noteTitle" type="text" required placeholder="e.g., Calculus - Week 1" />
+          </label>
+
+          <label>
+            Content
+            <textarea id="noteContent" rows="6" required placeholder="Write your notes here..."></textarea>
+          </label>
+
+          <button class="btn primary" type="submit">Upload</button>
+          <p id="uploadMsg" class="success" aria-live="polite"></p>
+        </form>
+      </div>
+
+      <div class="card">
+        <h2>Your Notes</h2>
+        <div class="row between">
+          <button id="refreshNotesBtn" class="btn" type="button">Refresh</button>
+        </div>
+        <div id="notesList" class="notes-list"></div>
+        <p id="notesEmpty" class="muted small" style="display:none;">
+          No notes yet. Upload your first note!
+        </p>
+      </div>
+
+      <div class="card">
+        <h2>Contact Form</h2>
+        <form id="contactForm" class="form">
+          <label>
+            Your Name (optional)
+            <input id="contactName" type="text" placeholder="Your name" />
+          </label>
+
+          <label>
+            Your Email
+            <input id="contactEmail" type="email" required placeholder="you@example.com" />
+          </label>
+
+          <label>
+            Message
+            <textarea id="contactMessage" rows="5" required placeholder="Type your message..."></textarea>
+          </label>
+
+          <button class="btn" type="submit">Send Message</button>
+          <p id="contactMsg" class="success" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login - CampusConnect</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="container header">
+    <div class="brand">
+      <h1>CampusConnect</h1>
+      <p class="muted">Login</p>
+    </div>
+    <nav class="nav">
+      <a class="btn" href="index.html">Home</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="grid">
+      <div class="card">
+        <h2>Login</h2>
+        <form id="loginForm" class="form">
+          <label>
+            Email
+            <input id="loginEmail" type="email" required placeholder="you@example.com" />
+          </label>
+
+          <label>
+            Password
+            <input id="loginPassword" type="password" required placeholder="Your password" />
+          </label>
+
+          <button class="btn primary" type="submit">Login</button>
+          <p id="loginError" class="error" aria-live="polite"></p>
+        </form>
+      </div>
+
+      <div class="card" id="signupCard">
+        <h2>Signup</h2>
+        <form id="signupForm" class="form">
+          <label>
+            Email
+            <input id="signupEmail" type="email" required placeholder="you@example.com" />
+          </label>
+
+          <label>
+            Password
+            <input id="signupPassword" type="password" required placeholder="Create a password" />
+          </label>
+
+          <button class="btn" type="submit">Create account</button>
+          <p id="signupError" class="error" aria-live="polite"></p>
+        </form>
+
+        <p class="muted small">
+          Tip: After signup, you will be logged in and redirected to your dashboard.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+  <script>
+    // If user opened /login.html#signup, scroll to signup.
+    if (location.hash === '#signup') {
+      document.getElementById('signupCard').scrollIntoView({ behavior: 'smooth' });
+    }
+  </script>
+</body>
+</html>
+
