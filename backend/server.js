@@ -25,7 +25,7 @@ app.use(
     credentials: false,
   })
 );
-
+app.options("*", cors());
 app.get("/health", (req, res) => {
   res.json({ ok: true, service: "campusconnect-backend" });
 });
