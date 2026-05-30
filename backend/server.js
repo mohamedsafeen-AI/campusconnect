@@ -19,13 +19,11 @@ const app = express();
 app.use(express.json());
 
 // Allow frontend calls (local development + deployed)
-app.use(
-  cors({
-    origin: true, // beginner-friendly: allow all origins
-    credentials: false,
-  })
-);
-app.options("*", cors());
+app.use(cors());
+
+app.options("*", (req, res) => {
+  res.sendStatus(200);
+});
 app.get("/health", (req, res) => {
   res.json({ ok: true, service: "campusconnect-backend" });
 });
