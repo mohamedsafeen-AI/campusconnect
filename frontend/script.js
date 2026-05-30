@@ -21,8 +21,8 @@ const BACKEND_URL = "http://localhost:3000";
 // Supabase (frontend)
 // Replace these with your own values from Supabase dashboard.
 // Project settings -> API -> Project URL and anon public key
-const SUPABASE_URL = "YOUR_SUPABASE_URL";
-const SUPABASE_ANON_KEY = "YOUR_SUPABASE_ANON_KEY";
+const SUPABASE_URL = "https://rhrlwizycmcuvdpdspvf.supabase.co";
+const SUPABASE_ANON_KEY = "sb_publishable_30feXX4wY2YYCvTTqiu-gQ_nkjK6gCG";
 
 // We load Supabase client dynamically (so we don't require bundlers)
 // by using ESM import from CDN. Modern browsers support this.
