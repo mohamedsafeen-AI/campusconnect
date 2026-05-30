@@ -17,13 +17,15 @@ const app = express();
 
 // Enable JSON parsing for request body
 app.use(express.json());
+app.use(cors({
+  origin: "*",
+  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+  allowedHeaders: ["Content-Type", "Authorization"]
+}));
 
+app.options("*", cors());
 // Allow frontend calls (local development + deployed)
-app.use(cors());
 
-app.options("*", (req, res) => {
-  res.sendStatus(200);
-});
 app.get("/health", (req, res) => {
   res.json({ ok: true, service: "campusconnect-backend" });
 });
