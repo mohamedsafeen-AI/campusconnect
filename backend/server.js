@@ -29,7 +29,9 @@ app.use(
 app.get("/health", (req, res) => {
   res.json({ ok: true, service: "campusconnect-backend" });
 });
-
+app.get("/", (req, res) => {
+  res.send("CampusConnect Backend Running");
+});
 /**
  * ===== Notes Endpoints =====
  */
