@@ -38,6 +38,7 @@ app.get("/", (req, res) => {
 
 // Get all notes for the logged-in user
 app.get("/api/notes", async (req, res) => {
+  console.log("HEADERS:", req.headers);
   try {
     const { userId } = await verifySupabaseJwt(req);
 
