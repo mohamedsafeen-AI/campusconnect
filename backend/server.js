@@ -23,7 +23,7 @@ app.use(cors({
   allowedHeaders: ["Content-Type", "Authorization"]
 }));
 
-app.options("*", cors());
+
 // Allow frontend calls (local development + deployed)
 
 app.get("/health", (req, res) => {
