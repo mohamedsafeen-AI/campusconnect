@@ -16,7 +16,7 @@
 
 // Backend URL (you will update this in deployment too)
 // Local example: http://localhost:3000
-const BACKEND_URL = "https://campusconnect-backend-hccgypj08-mohamedsafeen-s-projects.vercel.app";
+const BACKEND_URL = "https://campusconnect-backend-psi.vercel.app";
 
 // Supabase (frontend)
 // Replace these with your own values from Supabase dashboard.
