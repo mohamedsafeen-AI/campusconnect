@@ -152,6 +152,17 @@ app.post("/api/contact", async (req, res) => {
       ])
       .select("id")
       .single();
+    await resend.emails.send({
+  from: "onboarding@resend.dev",
+  to: "mohamedsafeen590@gmail.com",
+  subject: "New Contact Form Message",
+  html: `
+    <h2>New Contact Message</h2>
+    <p><strong>Name:</strong> ${name}</p>
+    <p><strong>Email:</strong> ${email}</p>
+    <p><strong>Message:</strong> ${message}</p>
+  `,
+});
 
     if (error) throw error;
 
