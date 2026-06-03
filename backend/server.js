@@ -10,6 +10,8 @@ require("dotenv").config();
 
 const express = require("express");
 const cors = require("cors");
+const { Resend } = require("resend");
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 const { verifySupabaseJwt, supabaseAdmin } = require("./config/supabaseClient");
 
